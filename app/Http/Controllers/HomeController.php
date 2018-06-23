@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Cliente;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Client;
 
 class HomeController extends Controller
 {
@@ -25,4 +27,5 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
 }

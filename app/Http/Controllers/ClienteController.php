@@ -39,6 +39,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+
         $cliente = Cliente::create($request->all());
         return redirect()->route('cliente.index');
     }
@@ -49,9 +50,10 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function show(Cliente $cliente)
+    public function show($cliente)
     {
-        //
+        $clientes = Cliente::findOrFail($cliente);
+        return view('cliente.show',compact('clientes'));
     }
 
     /**
@@ -60,9 +62,11 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cliente $cliente)
+    public function edit($cliente)
     {
-        //
+      $promos = Promo::all();
+      $clientes = Cliente::findOrFail($cliente);
+      return view('cliente.edit', compact ('clientes','promos'));
     }
 
     /**
@@ -72,9 +76,12 @@ class ClienteController extends Controller
      * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(Request $request, $cliente)
     {
-        //
+      $clientes = Cliente::findOrFail($cliente);
+      $clientes->update($request->all());
+      return redirect()->route('cliente.show' ,compact('clientes'));
+
     }
 
     /**

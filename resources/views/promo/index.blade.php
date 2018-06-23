@@ -8,7 +8,8 @@
         <h4><b>Promociones</b> <small><a class="btn btn-sm btn-success pull-right" href="{{ route('promo.create') }}">Nueva Promocion</a></small></h4>
     </div>
     <div class="panel-body">
-        <table id="example" class="table example">
+        <!-- <table class="table datatable"> -->
+        <table id="datatable" class="table table-hover table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>#</th>

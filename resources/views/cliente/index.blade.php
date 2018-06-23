@@ -11,7 +11,7 @@
 
 <div class="panel-body">
     {{--<table class="table datatable table-bordered table-hover table-striped">--}}
-    <table id="example" class="table datatable example">
+    <table id="datatable" class="table table-hover table-striped table-bordered" style="width:100%">
         <thead>
         <tr>
             <th>#</th>
@@ -31,8 +31,8 @@
             <td>{{ $clientes->nombre_cli }}</td>
             <td>{{ $clientes->dni }}</td>
             <td>{{ $clientes->promo_id($clientes->promo) }}</td>
-            <td>{{ $clientes->fecha_de_inicio }}</td>
-            <td>{{ $clientes->fecha_fin }}</td>
+            <td>{{ date('d-m-y', strtotime($clientes->fecha_de_inicio)) }}</td>
+            <td>{{ date('d-m-Y', strtotime($clientes->fecha_fin)) }}</td>
             <td>{{ $clientes->id }}</td>
             <td>
                 <a class="btn btn-sm btn-warning" href="#">Editar</a>

@@ -11,6 +11,7 @@
     <title>GYM |  @yield('title')</title>
 
     <!-- Styles -->
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <style>
@@ -122,6 +123,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/all.js') }}"></script>
     <script>
         function showPromo(str) {
             if (str == "") {

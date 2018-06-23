@@ -11,5 +11,15 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.scripts([
+    'resources/assets/js/jquery.dataTables.min.js',
+    'resources/assets/js/dataTables.bootstrap.min.js',
+], 'public/js/all.js');
+
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+mix.styles([
+    'resources/assets/css/jquery.dataTables.min.css',
+    'resources/assets/css/dataTables.bootstrap.min.css',
+], 'public/css/all.css');

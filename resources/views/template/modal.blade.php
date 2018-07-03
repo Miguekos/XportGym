@@ -14,10 +14,7 @@
                     <input type="text" class="form-control col-xs-6">
                 </div>
 
-                @foreach($cliente as $clientes)
 
-                    <input type="text" value="{{ $clientes->nombre_cli }}" class="form-control col-xs-6">
-                @endforeach
 
             </div>
             <div class="modal-footer">

@@ -9,7 +9,7 @@
     </div>
     <div class="panel-body">
         <!-- <table class="table datatable"> -->
-        <table id="datatable" class="table table-hover table-striped table-bordered" style="width:100%">
+        <table id="datatable" class="table table-hover compact table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>#</th>
@@ -28,8 +28,8 @@
                     <td>{{ $promo->dias }}</td>
                     <td>{{ $promo->precio }}</td>
                     <td>
-                        <a class="btn btn-sm btn-warning" href="#">Editar</a>
-                        <a class="btn btn-sm btn-danger" href="#">Eliminar</a>
+                        <a class="btn btn-xs btn-warning" href="#">Editar</a>
+                        <a class="btn btn-xs btn-danger" href="#">Eliminar</a>
                     </td>
                 </tr>
             @endforeach

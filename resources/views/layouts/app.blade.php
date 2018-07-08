@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 <style>
     table.dataTable.no-footer {
@@ -26,7 +26,7 @@
     }
 </style>
 <body>
-    <div id="app">
+
 
 @include('template.nav')
 
@@ -35,7 +35,7 @@
             <li><a href="#">Library</a></li>
             <li class="active">Data</li>
         </ol> -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default">
@@ -44,10 +44,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+
     <script src="{{ asset('js/all.js') }}"></script>
     <script>
         function showPromo(str) {

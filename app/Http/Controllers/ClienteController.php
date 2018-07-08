@@ -97,6 +97,14 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente)
     {
-        //
+
+        $clientes = Cliente::find($cliente);
+        $cliente->delete();
+        return redirect()->route('cliente.index');
+    }
+
+    public function apicliente()
+    {
+      return Cliente::all();
     }
 }
